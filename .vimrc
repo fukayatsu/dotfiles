@@ -3,6 +3,7 @@
 "
 
 
+colorscheme wombat
 
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!
@@ -23,7 +24,6 @@ set nocompatible               " be iMproved
 
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
-
 
 " unite
   " 入力モードで開始する
