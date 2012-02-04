@@ -1,3 +1,9 @@
-https://github.com/Shougo/neobundle.vim
+using https://github.com/Shougo/neobundle.vim
 
 ubuntu
+
+
+$ cd
+$ mkdir dotfiles
+$ git clone git@github.com:fukayatsu/dotfiles.git
+$ ./symlink.sh
