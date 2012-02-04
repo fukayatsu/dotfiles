@@ -1,8 +1,11 @@
 using https://github.com/Shougo/neobundle.vim
 
-on ubuntu
+on ubuntu or macos
 
-    $ cd
-    $ mkdir dotfiles
-    $ git clone git@github.com:fukayatsu/dotfiles.git
-    $ ./symlink.sh
+$ mkdir dotfiles
+$ git clone git@github.com:fukayatsu/dotfiles.git
+$ cd dotfiles
+  $ git submodule update --init
+  $ ./symlink.sh
+  $ vim
+    :NeoBundleInstall
