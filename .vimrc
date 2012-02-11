@@ -2,6 +2,9 @@
 " install or make : w3m,vimproc, 
 "
 
+" coffeescript
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+
 colorscheme wombat
 set tabstop=2
 set shiftwidth=2
@@ -39,6 +42,8 @@ set nocompatible               " be iMproved
 
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
+
+	NeoBundle 'kchmck/vim-coffee-script'
 
 " unite
   " 入力モードで開始する
