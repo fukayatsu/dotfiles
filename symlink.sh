@@ -1,5 +1,6 @@
 #!/bin/sh
 ln -fs $PWD/.vimrc $HOME/.vimrc
+ln -fs $PWD/.gvimrc $HOME/.gvimrc
 ln -fs $PWD/.bashrc $HOME/.bashrc
 mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.vim/colors

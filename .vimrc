@@ -2,9 +2,24 @@
 " install or make : w3m,vimproc, 
 "
 
-
 colorscheme wombat
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
+set autoindent
+set smartindent
 
+set number
+set title
+set cursorline
+
+syntax on
+filetype indent on
+filetype plugin on
+
+
+
+" プラグインの設定
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!
   
