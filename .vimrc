@@ -7,15 +7,18 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead Cakefile set filetype=coffee
 
 colorscheme wombat
+set expandtab
 set tabstop=2
 set shiftwidth=2
-set softtabstop=0
+set softtabstop=2
 set autoindent
 set smartindent
 
 set number
 set title
 set cursorline
+set list
+set lcs=tab:>.,eol:$,trail:_,extends:\
 
 syntax on
 filetype indent on
