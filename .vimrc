@@ -4,6 +4,7 @@
 
 " coffeescript
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead Cakefile set filetype=coffee
 
 colorscheme wombat
 set tabstop=2
