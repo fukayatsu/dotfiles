@@ -1,5 +1,5 @@
-mklink %HOME%\_vimrc %CD%\.vimrc
-mklink %HOME%\_gvimrc %CD%\.gvimrc
+mklink %HOME%\_vimrc %CD%\vimrc
+mklink %HOME%\_gvimrc %CD%\gvimrc
 mkdir %HOME%\vimfiles
 mkdir %HOME%\vimfiles\bundle
 mkdir %HOME%\vimfiles\colors

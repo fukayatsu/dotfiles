@@ -1,8 +1,8 @@
 #!/bin/sh
-ln -fs $PWD/.vimrc $HOME/.vimrc
-ln -fs $PWD/.gvimrc $HOME/.gvimrc
-ln -fs $PWD/.bashrc $HOME/.bashrc
-ln -fs $PWD/.bash_profile $HOME/.bash_profile
+ln -fs $PWD/vimrc $HOME/.vimrc
+ln -fs $PWD/gvimrc $HOME/.gvimrc
+ln -fs $PWD/bashrc $HOME/.bashrc
+ln -fs $PWD/bash_profile $HOME/.bash_profile
 mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.vim/colors
 ln -fs $PWD/neobundle.vim $HOME/.vim/bundle/neobundle.vim
