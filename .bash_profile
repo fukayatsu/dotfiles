@@ -1,13 +1,11 @@
-#NVM=v0.6.12
-source ~/.nvm/nvm.sh
-nvm use $NVM
-alias coffee=~/.nvm/$NVM/lib/node_modules/coffee-script/bin/coffee
-alias cake=~/.nvm/$NVM/lib/node_modules/coffee-script/bin/cake
-unset NVM
-
 alias ll='ls -a -l'
 alias gvim='mvim'
+
+#android
 alias adb='/Developer/android-sdk-macosx/platform-tools/adb'
+
+#node.js
+source ~/.nvm/nvm.sh
 
 # git
 source /usr/local/etc/bash_completion.d/git-completion.bash
