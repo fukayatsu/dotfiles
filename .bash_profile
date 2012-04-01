@@ -1,4 +1,4 @@
-NVM=v0.6.12
+#NVM=v0.6.12
 source ~/.nvm/nvm.sh
 nvm use $NVM
 alias coffee=~/.nvm/$NVM/lib/node_modules/coffee-script/bin/coffee
