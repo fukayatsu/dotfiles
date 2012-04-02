@@ -5,6 +5,7 @@
 " coffeescript
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead Cakefile set filetype=coffee
+autocmd BufNewFile,BufRead *.jade set filetype=jade
 
 colorscheme wombat
 set expandtab
@@ -47,7 +48,8 @@ set nocompatible               " be iMproved
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
 
-	NeoBundle 'kchmck/vim-coffee-script'
+  NeoBundle 'kchmck/vim-coffee-script'
+  NeoBundle 'digitaltoad/vim-jade.git'
 
 " unite
   " 入力モードで開始する
