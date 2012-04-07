@@ -48,18 +48,39 @@ set nocompatible               " be iMproved
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
 
+  " coffee & jade
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'digitaltoad/vim-jade.git'
+
+  " twitter
+  NeoBundle 'vim-scripts/TwitVim.git'
 
 " unite
   " 入力モードで開始する
   let g:unite_enable_start_insert=1
+  " バッファ一覧
+  " nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+  " ファイル一覧
+  " nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+  " レジスタ一覧
+  " nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+  " 最近使用したファイル一覧
+  " nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+  " 常用セット
+  " nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
+  " 全部乗せ
+  " nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+
   " バッファ一覧
   noremap <C-P> :Unite buffer<CR>
   " ファイル一覧
   noremap <C-N> :Unite -buffer-name=file file<CR>
   " 最近使ったファイルの一覧
   noremap <C-Z> :Unite file_mru<CR>
+
+  " 常用セット
+  noremap <C-M> :Unite file_mru buffer<CR>
+
   " ウィンドウを分割して開く
   au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
   au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
