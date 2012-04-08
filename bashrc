@@ -105,3 +105,4 @@ fi
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 
+alias gvim='gvim -f'
