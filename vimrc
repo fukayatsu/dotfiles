@@ -20,12 +20,20 @@ set title
 set cursorline
 set list
 set lcs=tab:>.,eol:$,trail:_,extends:\
+set incsearch
+set hlsearch
+
+
 
 syntax on
 filetype indent on
 filetype plugin on
 
-
+" cut & paste
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
 
 " プラグインの設定
 set nocompatible               " be iMproved
@@ -48,18 +56,39 @@ set nocompatible               " be iMproved
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
 
+  " coffee & jade
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'digitaltoad/vim-jade.git'
+
+  " twitter
+  NeoBundle 'vim-scripts/TwitVim.git'
 
 " unite
   " 入力モードで開始する
   let g:unite_enable_start_insert=1
+  " バッファ一覧
+  " nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+  " ファイル一覧
+  " nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+  " レジスタ一覧
+  " nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+  " 最近使用したファイル一覧
+  " nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+  " 常用セット
+  " nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
+  " 全部乗せ
+  " nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+
   " バッファ一覧
   noremap <C-P> :Unite buffer<CR>
   " ファイル一覧
   noremap <C-N> :Unite -buffer-name=file file<CR>
   " 最近使ったファイルの一覧
   noremap <C-Z> :Unite file_mru<CR>
+
+  " 常用セット
+  noremap <C-M> :Unite file_mru buffer<CR>
+
   " ウィンドウを分割して開く
   au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
   au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
@@ -104,14 +133,14 @@ set nocompatible               " be iMproved
     " Set minimum syntax keyword length.
     let g:neocomplcache_min_syntax_length = 3
     let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-    
+
     " Define dictionary.
     let g:neocomplcache_dictionary_filetype_lists = {
         \ 'default' : '',
         \ 'vimshell' : $HOME.'/.vimshell_hist',
         \ 'scheme' : $HOME.'/.gosh_completions'
             \ }
-    
+
     " Define keyword.
     if !exists('g:neocomplcache_keyword_patterns')
         let g:neocomplcache_keyword_patterns = {}
@@ -124,10 +153,10 @@ set nocompatible               " be iMproved
     smap <C-k>     <Plug>(neocomplcache_snippets_expand)
     inoremap <expr><C-g>     neocomplcache#undo_completion()
     inoremap <expr><C-l>     neocomplcache#complete_common_string()
-    
+
     " SuperTab like snippets behavior.
     "imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-    
+
     " Recommended key-mappings.
     " <CR>: close popup and save indent.
     inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
@@ -138,9 +167,9 @@ set nocompatible               " be iMproved
     inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
     inoremap <expr><C-y>  neocomplcache#close_popup()
     inoremap <expr><C-e>  neocomplcache#cancel_popup()
-    
+
     " AutoComplPop like behavior.
-    "let g:neocomplcache_enable_auto_select = 1
+    let g:neocomplcache_enable_auto_select = 0
 
   "後編"
   " Shell like behavior(not recommended).
@@ -149,14 +178,14 @@ set nocompatible               " be iMproved
     "let g:neocomplcache_disable_auto_complete = 1
     "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
     "inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-    
+
     " Enable omni completion.
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    
+
     " Enable heavy omni completion.
     if !exists('g:neocomplcache_omni_patterns')
         let g:neocomplcache_omni_patterns = {}

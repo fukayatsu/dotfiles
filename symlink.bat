@@ -1,3 +1,4 @@
+mklink %HOME%\.gitignore %CD%\gitignore
 mklink %HOME%\_vimrc %CD%\vimrc
 mklink %HOME%\_gvimrc %CD%\gvimrc
 mkdir %HOME%\vimfiles

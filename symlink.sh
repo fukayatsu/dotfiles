@@ -1,4 +1,5 @@
 #!/bin/sh
+ln -fs $PWD/gitignore $HOME/.gitignore
 ln -fs $PWD/vimrc $HOME/.vimrc
 ln -fs $PWD/gvimrc $HOME/.gvimrc
 ln -fs $PWD/bashrc $HOME/.bashrc

@@ -1,11 +1,13 @@
+# 
 using https://github.com/Shougo/neobundle.vim
 
 on ubuntu or macos
 
+# install
 $ cd
 $ git clone git@github.com:fukayatsu/dotfiles.git
 $ cd dotfiles
-  $ git submodule update --init
-  $ ./symlink.sh
-  $ vim
+$ git submodule update --init
+$ ./symlink.sh
+$ vim
     :NeoBundleInstall
