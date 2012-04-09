@@ -1,7 +1,10 @@
 alias ll='ls -a -l'
 alias gvim='mvim'
 
+#development
 alias amb='~/deka/amb'
+#alias cdadmin='cd ~/deka/community/amebasocial-node/admin'
+alias cadmin='cd ~/deka/community/amebame-admin'
 
 #android
 alias adb='/Developer/android-sdk-macosx/platform-tools/adb'
