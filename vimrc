@@ -8,6 +8,7 @@ autocmd BufNewFile,BufRead Cakefile set filetype=coffee
 autocmd BufNewFile,BufRead *.jade set filetype=jade
 
 colorscheme wombat
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -62,6 +63,13 @@ set nocompatible               " be iMproved
 
   " twitter
   NeoBundle 'vim-scripts/TwitVim.git'
+
+  " ime
+  " 「日本語入力固定モード」切替キー
+  " https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/ibus#TOC-IBus-Python-
+  " inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
+  " PythonによるIBus制御指定
+  let IM_CtrlIBusPython = 1
 
 " unite
   " 入力モードで開始する
