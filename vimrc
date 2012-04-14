@@ -65,6 +65,7 @@ set nocompatible               " be iMproved
   NeoBundle 'vim-scripts/TwitVim.git'
 
   " ime
+  NeoBundle 'git@bitbucket.org:fukayatsu/vim-im-control.git'
   " 「日本語入力固定モード」切替キー
   " https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/ibus#TOC-IBus-Python-
   " inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
