@@ -39,7 +39,7 @@ imap <C-v> <ESC>"+pa
 " プラグインの設定
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!
-  
+
   if has('vim_starting')
      set runtimepath+=~/.vim/bundle/neobundle.vim/
      call neobundle#rc(expand('~/.vim/bundle/'))
@@ -57,6 +57,11 @@ set nocompatible               " be iMproved
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
 
+  " project
+  " NeoBundle 'vim-scripts/project.vim'
+  " let loaded_project = 1
+  NeoBundle 'Shougo/vimfiler'
+
   " coffee & jade
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'digitaltoad/vim-jade.git'
@@ -71,6 +76,47 @@ set nocompatible               " be iMproved
   " inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
   " PythonによるIBus制御指定
   let IM_CtrlIBusPython = 1
+
+
+"　VimFiler
+
+  " キーマップ
+  nnoremap <silent> vf :<C-u>VimFiler -buffer-name=explorer -split -winwidth=25 -toggle -no-quit<Cr>
+ " デフォルトのファイラーに
+  let g:vimfiler_as_default_explorer = 1
+  " ファイル削除などを可能に
+  let g:vimfiler_safe_mode_by_default = 0
+  " 日時表示はなるべく短く
+  let g:vimfiler_time_format = "%y-%m-%d %H:%M"
+  " 表示設定
+  let g:vimfiler_tree_leaf_icon = ' '
+  let g:vimfiler_tree_opened_icon = '▾'
+  let g:vimfiler_tree_closed_icon = '▸'
+  let g:vimfiler_file_icon = '-'
+  let g:vimfiler_marked_file_icon = '*'
+  " システムのデフォルトの関連付けで開く
+  call vimfiler#set_execute_file('bmp,jpg,png,gif,pdf', 'open')
+  "nnoremap <silent> vf :<C-u>VimFilerSplit<CR>
+  autocmd! FileType vimfiler call g:my_vimfiler_settings()
+  function! g:my_vimfiler_settings()
+    nmap     <buffer><expr><Cr> vimfiler#smart_cursor_map("\<Plug>(vimfiler_expand_tree)", "\<Plug>(vimfiler_edit_file)")
+    nnoremap <buffer>s          :call vimfiler#mappings#do_action('my_split')<Cr>
+    nnoremap <buffer>v          :call vimfiler#mappings#do_action('my_vsplit')<Cr>
+  endfunction
+
+  let my_action = { 'is_selectable' : 1 }
+  function! my_action.func(candidates)
+    wincmd p
+    exec 'split '. a:candidates[0].action__path
+  endfunction
+  call unite#custom_action('file', 'my_split', my_action)
+
+  let my_action = { 'is_selectable' : 1 }
+  function! my_action.func(candidates)
+    wincmd p
+    exec 'vsplit '. a:candidates[0].action__path
+  endfunction
+  call unite#custom_action('file', 'my_vsplit', my_action)
 
 " unite
   " 入力モードで開始する
