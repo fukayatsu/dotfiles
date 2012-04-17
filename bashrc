@@ -106,3 +106,8 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 
 alias gvim='gvim -f'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
