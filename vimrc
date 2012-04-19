@@ -67,7 +67,10 @@ set nocompatible               " be iMproved
   NeoBundle 'digitaltoad/vim-jade.git'
 
   " twitter
-  NeoBundle 'vim-scripts/TwitVim.git'
+  " NeoBundle 'vim-scripts/TwitVim.git'
+
+  " calendar
+  NeoBundle 'mattn/calendar-vim.git'
 
   " ime
   NeoBundle 'git@bitbucket.org:fukayatsu/vim-im-control.git'
