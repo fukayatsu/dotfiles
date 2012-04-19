@@ -1,5 +1,6 @@
+scriptencoding utf-8
 " 初回導入時
-" install or make : w3m,vimproc, 
+" install or make : w3m,vimproc,
 "
 
 " coffeescript
@@ -19,11 +20,17 @@ set smartindent
 set number
 set title
 set cursorline
-set list
-set lcs=tab:>.,eol:$,trail:_,extends:\
-set incsearch
 set hlsearch
+set incsearch
 
+"set lcs=tab:>.,eol:$,trail:_,extends:\
+set lcs=tab:>.,trail:_,extends:\
+set list
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
 
 
 syntax on
@@ -36,7 +43,7 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-" プラグインの設定
+" プラグインの設定　
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!
 
