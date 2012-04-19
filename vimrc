@@ -43,7 +43,7 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-" プラグインの設定　
+" プラグインの設定
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!
 
@@ -79,6 +79,8 @@ set nocompatible               " be iMproved
   " calendar
   NeoBundle 'mattn/calendar-vim.git'
 
+  NeoBundle 'git@github.com:fukayatsu/vim-diary.git'
+
   " ime
   NeoBundle 'git@bitbucket.org:fukayatsu/vim-im-control.git'
   " 「日本語入力固定モード」切替キー
@@ -88,7 +90,7 @@ set nocompatible               " be iMproved
   let IM_CtrlIBusPython = 1
 
 
-"　VimFiler
+"VimFiler
 
   " キーマップ
   nnoremap <silent> vf :<C-u>VimFiler -buffer-name=explorer -split -winwidth=25 -toggle -no-quit<Cr>
