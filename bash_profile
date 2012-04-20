@@ -1,10 +1,15 @@
-#alias ll='ls -a -l'
+alias ..='cd ..'
+alias ll='ls -l'
+alias la='ls -la'
 alias gvim='mvim'
+
+function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 #development
 alias amb='~/deka/amb'
 #alias cdadmin='cd ~/deka/community/amebasocial-node/admin'
 alias cadmin='cd ~/deka/community/amebame-admin'
+
 
 #android
 #alias adb='/Developer/android-sdk-macosx/platform-tools/adb'
