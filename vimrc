@@ -63,6 +63,18 @@ set nocompatible               " be iMproved
 
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
+  " 横分割をするようにする
+  let g:quickrun_config={'*': {'split': ''}}
+
+  " 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
+  set splitbelow
+  set splitright
+
+
+  " for java
+  NeoBundle 'vim-scripts/javacomplete'
+  autocmd FileType java :setlocal omnifunc=javacomplete#Complete
+  autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
 
   " project
   " NeoBundle 'vim-scripts/project.vim'
