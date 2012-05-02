@@ -112,7 +112,7 @@ alias ..='cd ..'
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+source ~/.nvm/nvm.sh
 
