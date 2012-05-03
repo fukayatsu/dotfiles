@@ -1,8 +1,5 @@
-set ignorecase
-set smartcase
-
 " ノーマルモードでもEnterで改行できるようにする
 noremap <CR> o<ESC>
-noremap <S-CR> O<ESC>
 
-
+" 定義できないようだ
+" noremap <S-CR> O<ESC>
