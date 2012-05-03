@@ -47,6 +47,11 @@ imap <C-v> <ESC>"+pa
 noremap <CR> o<ESC>
 noremap <S-CR> O<ESC>
 
+" 新しいWindowを下、右に開く
+set splitbelow
+set splitright
+
+
 " プラグインの設定
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!

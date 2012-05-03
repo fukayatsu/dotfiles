@@ -1,0 +1,8 @@
+set ignorecase
+set smartcase
+
+" ノーマルモードでもEnterで改行できるようにする
+noremap <CR> o<ESC>
+noremap <S-CR> O<ESC>
+
+
