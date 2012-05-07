@@ -8,6 +8,10 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead Cakefile set filetype=coffee
 autocmd BufNewFile,BufRead *.jade set filetype=jade
 
+" viable 
+autocmd BufNewFile,BufRead *viablerc set filetype=vim
+
+
 colorscheme wombat
 
 set expandtab
