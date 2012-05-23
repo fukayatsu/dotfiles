@@ -1,0 +1,34 @@
+!! Caps Lock -> escape(oneshot), Control by at-home-modifier
+!! remove Lock = Caps_Lock
+!! keycode 37 = Escape
+!! add Control = Control_L
+
+!! one shot前提 esc:9
+keycode 37 = Escape
+remove control = Escape
+
+! 左のAltをSuper_Lに
+!remove mod1 = Alt_L
+!keycode 64 = Super_L
+!add mod4 = Super_L
+
+! マウスクリック用
+! 右Altを変更しておく
+remove mod1 = Alt_R
+keycode 108 = Mode_switch
+keysym u = u U Pointer_Button1
+keysym i = i I Pointer_Button3
+keysym p = p P Pointer_Button2
+
+!! セミコロンとコロンを入れ替え
+keycode 47 = colon semicolon colon semicolon
+
+!! Vim like なキーボード移動
+keycode 103 = Mode_switch
+keysym h = h H Left
+keysym j = j J Down
+keysym k = k K Up
+keysym l = l L Right
+
+!! natural scroll
+!! pointer = 1 2 3 5 4 7 6
