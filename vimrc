@@ -8,6 +8,10 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead Cakefile set filetype=coffee
 autocmd BufNewFile,BufRead *.jade set filetype=jade
 
+" viable 
+autocmd BufNewFile,BufRead *viablerc set filetype=vim
+
+
 colorscheme wombat
 
 set expandtab
@@ -43,6 +47,15 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
+" ノーマルモードで改行
+noremap <CR> o<ESC>
+noremap <S-CR> O<ESC>
+
+" 新しいWindowを下、右に開く
+set splitbelow
+set splitright
+
+
 " プラグインの設定
 set nocompatible               " be iMproved
   filetype plugin indent off     " required!
@@ -68,6 +81,19 @@ set nocompatible               " be iMproved
   " NeoBundle 'vim-scripts/project.vim'
   " let loaded_project = 1
   NeoBundle 'Shougo/vimfiler'
+
+  "memo"
+  NeoBundle 'glidenote/memolist.vim'
+  let g:memolist_path = "~/Dropbox/memo"
+  let g:memolist_memo_suffix = "md"
+  let g:memolist_memo_date = "%Y-%m-%d %H:%M"
+  "let g:memolist_memo_date = "epoch"
+  "let g:memolist_memo_date = "%D %T"
+  let g:memolist_prompt_tags = 1
+  let g:memolist_prompt_categories = 1
+  "let g:memolist_qfixgrep = 1
+  let g:memolist_vimfiler = 1
+  "let g:memolist_template_dir_path = "path/to/dir"
 
   " coffee & jade
   NeoBundle 'kchmck/vim-coffee-script'
@@ -154,7 +180,8 @@ set nocompatible               " be iMproved
   noremap <C-Z> :Unite file_mru<CR>
 
   " 常用セット
-  noremap <C-M> :Unite file_mru buffer<CR>
+  " noremap <C-M> :Unite file_mru buffer<CR>
+
 
   " ウィンドウを分割して開く
   au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')

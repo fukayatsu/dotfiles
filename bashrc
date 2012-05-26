@@ -111,9 +111,10 @@ alias gvim='gvim -f'
 alias ..='cd ..'
 alias eclipse='~/eclipse/eclipse &'
 
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-source ~/.nvm/nvm.sh
+source ~/nvm/nvm.sh
+alias adb=~/android/android-sdk-linux/platform-tools/adb
+alias declipse='~/deka/eclipse/eclipse &'
 

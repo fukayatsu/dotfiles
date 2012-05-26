@@ -1,0 +1,10 @@
+" ノーマルモードでもEnterで改行できるようにする
+noremap <CR> o<ESC>
+
+" 定義できないようだ
+" noremap <S-CR> O<ESC>
+
+" im_controlのテスト
+let IM_CtrlIBusPython = 1
+source ~/.vim/bundle/vim-im-control/plugin/im_control.vim
+
