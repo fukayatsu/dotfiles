@@ -2,7 +2,8 @@
 ln -fs $PWD/gitignore $HOME/.gitignore
 ln -fs $PWD/vimrc $HOME/.vimrc
 ln -fs $PWD/gvimrc $HOME/.gvimrc
-ln -fx $PWD/viablerc $HOME/.viablerc
+ln -fs $PWD/viablerc $HOME/.viablerc
+ln -fs $PWD/xmodmaprc $HOME/.xmodmaprc
 
 ln -fs $PWD/zshrc $HOME/.zshrc
 ln -fs $PWD/bashrc $HOME/.bashrc

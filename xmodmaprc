@@ -1,0 +1,33 @@
+! Caps Lock -> escape(oneshot), Control by at-home-modifier
+keycode 66 = Escape
+remove Lock = Escape
+
+! セミコロンとコロンを入れ替え
+keycode 47 = colon semicolon colon semicolon
+
+! backspaceと\を入れ替え
+keycode 51 = BackSpace
+keycode 22 = backslash bar
+
+! Super_L(133) -> 無変換
+! Super_R(134) -> 変換(one shot), Mode_switch by at-home-modifier
+! Alt_R(108) -> Super_R
+keycode 133 = Muhenkan
+remove mod4 = Muhenkan
+
+keycode 134 = Henkan_Mode
+remove mod4 = Henkan_Mode
+
+keycode 108 = Super_R
+remove mod1 = Super_R
+add mod4 = Super_R
+
+! Vim like なキーボード移動
+keycode 102 = Mode_switch
+keysym h = h H Left
+keysym j = j J Down
+keysym k = k K Up
+keysym l = l L Right
+
+! natural scroll
+pointer = 1 2 3 5 4 7 6 8 9 10 11 12
