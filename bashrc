@@ -1,6 +1,6 @@
-xkbset m
-xkbset exp =m
-xset m 1 1
+#xkbset m
+#xkbset exp =m
+#xset m 1 1
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -112,7 +112,7 @@ export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)
 
 alias gvim='gvim -f'
 alias ..='cd ..'
-alias amb='~/deka/amb'
+#alias amb='~/deka/amb'
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -120,5 +120,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source ~/nvm/nvm.sh
 alias adb=~/android/android-sdk-linux/platform-tools/adb
-alias declipse='~/deka/eclipse/eclipse &'
+#alias declipse='~/deka/eclipse/eclipse &'
 

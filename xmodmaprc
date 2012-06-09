@@ -1,17 +1,13 @@
-remove control = Control_L
-keycode 37 = Escape
-remove control = Escape
+remove lock = Caps_Lock
+keycode 66 = Escape
 
-! マウスクリック用
-! 右Altを変更しておく
+remove mod1 = Alt_L
+keycode 64 = Muhenkan NoSymbol Muhenkan
 remove mod1 = Alt_R
-keycode 108 = Mode_switch
-keysym u = u U Pointer_Button1
-keysym i = i I Pointer_Button3
-keysym p = p P Pointer_Button2
+keycode 108 = Henkan_Mode NoSymbol Henkan_Mode
 
 !! セミコロンとコロンを入れ替え
-keycode 47 = colon semicolon
+keycode 47 = colon semicolon colon semicolon
 
 !! Vim like なキーボード移動
 keysym h = h H Left

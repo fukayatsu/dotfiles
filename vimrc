@@ -113,7 +113,7 @@ set nocompatible               " be iMproved
   " https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-japanese/ime-control/ibus#TOC-IBus-Python-
   " inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
   " PythonによるIBus制御指定
-  let IM_CtrlIBusPython = 1
+"  let IM_CtrlIBusPython = 1
 
 
 "VimFiler
