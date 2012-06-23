@@ -45,6 +45,7 @@ set nocompatible               " be iMproved
   NeoBundle 'Shougo/vimshell'
   NeoBundle 'Shougo/unite.vim'
 
+  "" need textBrowse like w3m
   NeoBundle 'thinca/vim-ref'
   NeoBundle 'thinca/vim-quickrun'
 

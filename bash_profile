@@ -1,7 +1,6 @@
 alias ll='ls -a -l'
-alias gvim='mvim'
 
-alias amb='~/deka/amb'
+alias r='rails'
 
 #android
 alias adb='/Developer/android-sdk-macosx/platform-tools/adb'
