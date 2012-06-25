@@ -109,10 +109,13 @@ export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)
 
 alias gvim='gvim -f'
 alias ..='cd ..'
+alias amb='~/deka/amb'
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-source ~/.nvm/nvm.sh
+source ~/nvm/nvm.sh
+alias adb=~/android/android-sdk-linux/platform-tools/adb
+alias declipse='~/deka/eclipse/eclipse &'
 
