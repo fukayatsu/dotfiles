@@ -1,0 +1,36 @@
+[user]
+	name = fukayatsu
+	email = fukayatsu@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = subl -w
+[merge]
+        tool = p4merge
+[mergetool]
+        keepBackup = false
+[mergetool "p4merge"]
+        path = p4merge
+        keepTemporaries = false
+        trustExitCode = false
+[alias]
+  aa = add .
+  co = checkout
+  cob = checkout -b
+  br = branch
+  bra = branch -a
+  ft = fetch
+  ci = commit
+  cih = commit --amend -C HEAD
+  cim = commit -m
+  ps = push
+  ciam = commit -am
+  rb = rebase
+  rbh = rebase HEAD
+  d = diff
+  cl = clone
+  st = status -sb
+  vlog = log --pretty=format:'%C(red)%h%Creset %C(cyan)an>\
+       %Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'\
+       --abbrev-commit --date=relative
+

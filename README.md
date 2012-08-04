@@ -1,13 +1,12 @@
-# 
-using https://github.com/Shougo/neobundle.vim
+My dotfiles
+===========
 
-on ubuntu or macos
+# env
+MacBookPro(retina) Mountain Lion
 
-# install
-$ cd
-$ git clone git@github.com:fukayatsu/dotfiles.git
-$ cd dotfiles
-$ git submodule update --init
-$ ./symlink.sh
-$ vim
-    :NeoBundleInstall
+default editor: sublime text 2
+
+# setup
+
+    $ git clone git@github.com:fukayatsu/dotfiles.git
+    $ dotfiles/symlink.sh

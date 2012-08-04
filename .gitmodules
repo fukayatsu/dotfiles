@@ -1,8 +1,0 @@
-[submodule "neobundle.vim"]
-  path = neobundle.vim
-  url = https://github.com/Shougo/neobundle.vim.git
-  ignore = untracked
-[submodule "wombat.vim"]
-  path = wombat.vim
-  url = https://github.com/imsizon/wombat.vim.git
-  ignore = untracked
