@@ -1,0 +1,29 @@
+{
+	"auto_upgrade_last_run": 1344095739,
+	"installed_packages":
+	[
+		"BeautifyRuby",
+		"Browser Refresh",
+		"CakePHP (tmbundle)",
+		"Gist",
+		"Git",
+		"Haml",
+		"Jade",
+		"jQuery",
+		"LiveReload",
+		"Markdown Preview",
+		"Markdown Todo",
+		"Package Control",
+		"PHPUnit",
+		"Rails Related Files",
+		"RSpec",
+		"RSpec (snippets and syntax)",
+		"SCSS",
+		"Search CakePHP API",
+		"Search CakePHP Book",
+		"Simple Rails Navigator",
+		"Stylus",
+		"SublimeCodeIntel",
+		"Twitter Bootstrap Snippets"
+	]
+}
