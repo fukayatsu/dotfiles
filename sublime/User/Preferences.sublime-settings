@@ -1,22 +1,19 @@
 {
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_size": 16.0,
 	"ignored_packages":
 	[
 		""
 	],
 	"tab_size": 2,
+	"trailing_spaces_ignore_list":
+	[
+		"*.md",
+		"*.markdown"
+	],
+	"trailing_spaces_on_save": true,
 	"translate_tabs_to_spaces": true,
-
-	"vintage_ctrl_keys": true,
-	"vintage_start_in_command_mode": true,
-
-	// this is ST2's default function (to be turned off if you want to use Trailin spaces)
 	"trim_trailing_white_space_on_save": false,
-
-	// By default trailing spaces on save
- 	"trailing_spaces_on_save": true,
-
-	// Ignore markdown option
- 	"trailing_spaces_ignore_list": ["*.md", "*.markdown"]
-
+	"vintage_ctrl_keys": true,
+	"vintage_start_in_command_mode": true
 }

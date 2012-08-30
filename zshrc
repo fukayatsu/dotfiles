@@ -194,15 +194,17 @@ linux*)
 alias ls="ls --color"
 ;;
 esac
-alias la="ls -a"
+alias la="ls -al"
 alias lf="ls -F"
 alias ll="ls -l"
 alias du="du -h"
 alias df="df -h"
 
-alias octnew="~/octopress/octnew"
+alias octonew="~/github/octopress/octonew"
 
+alias gitk='gitk 2>/dev/null'
 
+alias xphp="/Applications/XAMPP/xamppfiles/bin/php"
 alias xmysql="/Applications/XAMPP/xamppfiles/bin/mysql"
 alias xmysqladmin="/Applications/XAMPP/xamppfiles/bin/mysqladmin"
 alias dev-cakes="/Applications/XAMPP/htdocs/dev-cakes"

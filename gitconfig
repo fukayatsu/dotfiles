@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	editor = subl -w
+	pager = less -x4
 [merge]
         tool = p4merge
 [mergetool]
@@ -17,15 +18,17 @@
   aa = add .
   co = checkout
   cob = checkout -b
-  br = branch
-  bra = branch -a
+  b = branch
+  ba = branch -a
   ft = fetch
   ci = commit
+  cia = commit -a
   cih = commit --amend -C HEAD
   cim = commit -m
   ps = push
   ciam = commit -am
   rb = rebase
+  rbm = rebase master
   rbh = rebase HEAD
   d = diff
   cl = clone
