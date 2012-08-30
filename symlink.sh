@@ -5,6 +5,9 @@ HOME_FILES=(
   "gitconfig"
   "zshrc"
   "zshenv"
+  "autotest"
+  "powconfig"
+  "rspec"
 )
 
 for file in ${HOME_FILES[@]}; do
