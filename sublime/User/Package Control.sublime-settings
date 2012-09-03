@@ -1,5 +1,5 @@
 {
-	"auto_upgrade_last_run": 1346293973,
+	"auto_upgrade_last_run": 1346632869,
 	"installed_packages":
 	[
 		"BeautifyRuby",
@@ -7,13 +7,13 @@
 		"Browser Refresh",
 		"CakePHP (tmbundle)",
 		"CoffeeScript",
+		"Cucumber",
 		"Gist",
 		"Git",
 		"Haml",
 		"Jade",
 		"jQuery",
 		"JsFormat",
-		"LiveReload",
 		"Markdown Preview",
 		"Markdown Todo",
 		"Package Control",
@@ -24,12 +24,12 @@
 		"RSpec",
 		"RSpec (snippets and syntax)",
 		"Ruby Slim",
+		"RubyTest",
 		"SCSS",
 		"Search CakePHP API",
 		"Search CakePHP Book",
 		"SideBarGit",
 		"Simple Rails Navigator",
-		"SmartMarkdown",
 		"Stylus",
 		"SublimeCodeIntel",
 		"Twitter Bootstrap Snippets"

@@ -21,8 +21,8 @@
   b = branch
   ba = branch -a
   ft = fetch
-  ci = commit
-  cia = commit -a
+  ci = commit -v
+  cia = commit -av
   cih = commit --amend -C HEAD
   cim = commit -m
   ps = push
