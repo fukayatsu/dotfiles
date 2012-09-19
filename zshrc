@@ -202,7 +202,10 @@ alias df="df -h"
 
 alias octonew="~/github/octopress/octonew"
 
-alias gitk='gitk 2>/dev/null'
+# alias gitk='gitk 2>/dev/null'
+alias gitk=gitx
+
+alias irb=pry
 
 alias xphp="/Applications/XAMPP/xamppfiles/bin/php"
 alias xmysql="/Applications/XAMPP/xamppfiles/bin/mysql"
