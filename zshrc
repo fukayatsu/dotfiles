@@ -207,6 +207,8 @@ alias gitk=gitx
 
 alias irb=pry
 
+alias be="bundle exec"
+
 alias xphp="/Applications/XAMPP/xamppfiles/bin/php"
 alias xmysql="/Applications/XAMPP/xamppfiles/bin/mysql"
 alias xmysqladmin="/Applications/XAMPP/xamppfiles/bin/mysqladmin"
