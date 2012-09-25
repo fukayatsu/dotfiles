@@ -18,6 +18,7 @@
   aa = add .
   co = checkout
   cob = checkout -b
+  cot = checkout -t
   b = branch
   ba = branch -a
   ft = fetch
