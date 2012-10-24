@@ -1,5 +1,5 @@
 {
-	"auto_upgrade_last_run": 1346632869,
+	"auto_upgrade_last_run": 1351042031,
 	"installed_packages":
 	[
 		"BeautifyRuby",
@@ -19,6 +19,7 @@
 		"Package Control",
 		"Phpcs",
 		"PHPUnit",
+		"Pretty JSON",
 		"Rails Latest Migration",
 		"Rails Related Files",
 		"RSpec",

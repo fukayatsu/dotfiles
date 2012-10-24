@@ -3,6 +3,9 @@ HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
 
+## vim
+# bindkey -v
+
 ## 補完機能の強化
 autoload -U compinit
 compinit
@@ -205,9 +208,12 @@ alias octonew="~/github/octopress/octonew"
 # alias gitk='gitk 2>/dev/null'
 alias gitk=gitx
 
+alias gitbad="git branch | grep -v 'master' | xargs git branch -d"
+
 alias irb=pry
 
 alias be="bundle exec"
+alias bi="bundle install"
 
 alias xphp="/Applications/XAMPP/xamppfiles/bin/php"
 alias xmysql="/Applications/XAMPP/xamppfiles/bin/mysql"

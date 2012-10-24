@@ -16,11 +16,13 @@
         trustExitCode = false
 [alias]
   aa = add .
+  au = add -u
   co = checkout
   cob = checkout -b
   cot = checkout -t
   b = branch
   ba = branch -a
+  bd = branch -d
   ft = fetch
   ci = commit -v
   cia = commit -av
@@ -38,3 +40,5 @@
        %Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'\
        --abbrev-commit --date=relative
 
+[push]
+	default = simple
