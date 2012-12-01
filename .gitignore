@@ -2,5 +2,5 @@
 *~
 *.swp
 *.swo
-RubyTest.last-run
+*.last-run
 SublimeTweet*.settings
