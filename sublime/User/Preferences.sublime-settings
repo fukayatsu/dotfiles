@@ -1,11 +1,14 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"draw_white_space": "all",
 	"font_face": "SourceCodePro-Regular",
 	"font_size": 16.0,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		""
 	],
+	"scroll_past_end": true,
 	"tab_size": 2,
 	"trailing_spaces_ignore_list":
 	[

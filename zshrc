@@ -3,6 +3,12 @@ HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
 
+# homebrew
+export PATH=/usr/local/bin:$PATH
+
+# node.js
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 ## vim
 # bindkey -v
 
@@ -203,12 +209,18 @@ alias ll="ls -l"
 alias du="du -h"
 alias df="df -h"
 
+alias rake='noglob rake'
 alias octonew="~/github/octopress/octonew"
 
 # alias gitk='gitk 2>/dev/null'
 alias gitk=gitx
 
-alias gitbad="git branch | grep -v 'master' | xargs git branch -d"
+alias gitdb-local="git checkout master && git pull && git branch --merged | grep -v 'master' | xargs git branch -d"
+alias gitdb-track="git checkout master && git pull && git branch -r --merged | grep -v 'master' | xargs git branch -r -d"
+alias gitdb-remote="git checkout master && git pull && git branch -a --merged | grep -v 'master' | grep remotes/origin | sed -e 's% *remotes/origin/%%' | xargs -I% git push origin :%
+"
+
+alias githook-test-push="git commit --amend --no-edit; git push --force"
 
 alias irb=pry
 
@@ -256,3 +268,9 @@ function wikipedia
 {
     ${TEXT_BROWSER} http://ja.wikipedia.org/wiki/`_space2p20 $@`
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# ローカル固有の設定
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

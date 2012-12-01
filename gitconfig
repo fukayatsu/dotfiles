@@ -5,7 +5,7 @@
 	ui = auto
 [core]
 	editor = subl -w
-	pager = less -x4
+	pager = less -x4 -r
 [merge]
         tool = p4merge
 [mergetool]
@@ -20,6 +20,7 @@
   co = checkout
   cob = checkout -b
   cot = checkout -t
+  com = checkout master
   b = branch
   ba = branch -a
   bd = branch -d
@@ -42,3 +43,5 @@
 
 [push]
 	default = simple
+[heroku]
+	account = fukayatsu
