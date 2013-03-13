@@ -1,8 +1,5 @@
 [
-  {
-    "command": "tweet_line",
-    "keys": ["super+ctrl+t"]
-  },
+  { "keys": ["super+ctrl+t"], "command": "tweet_line"},
   { "keys": ["super+ctrl+m"], "command": "list_rails_models" },
   { "keys": ["super+ctrl+c"], "command": "list_rails_controllers" },
   { "keys": ["super+ctrl+v"], "command": "list_rails_views" },
@@ -10,5 +7,24 @@
   { "keys": ["super+ctrl+x"], "command": "list_rails_fixtures" },
   { "keys": ["super+ctrl+s"], "command": "list_rails_tests" },
   { "keys": ["super+ctrl+i"], "command": "list_rails_javascripts" },
-  { "keys": ["super+ctrl+y"], "command": "list_rails_stylesheets" }
+  { "keys": ["super+ctrl+y"], "command": "list_rails_stylesheets" },
+  { "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
+  { "keys": ["f2"], "command": "side_bar_rename" },
+  { "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" },
+
+  {"keys": ["super+ctrl+r"], "command": "reveal_in_side_bar"},
+
+ // how to move in the filer with hjkl
+  { "keys": ["j"], "command": "move", "args": {"by": "lines", "forward": true}, "context":
+      [ {"key": "control", "operand": "sidebar_tree"} ]
+  },
+  { "keys": ["k"], "command": "move", "args": {"by": "lines", "forward": false}, "context":
+      [ {"key": "control", "operand": "sidebar_tree"} ]
+  },
+  { "keys": ["l"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+      [ {"key": "control", "operand": "sidebar_tree"} ]
+  },
+  { "keys": ["h"], "command": "move", "args": {"by": "characters", "forward": false}, "context":
+      [ {"key": "control", "operand": "sidebar_tree"} ]
+  }
 ]

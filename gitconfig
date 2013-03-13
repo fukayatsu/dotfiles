@@ -6,6 +6,7 @@
 [core]
 	editor = subl -w
 	pager = less -x4 -r
+	excludesfile = ~/.gitignore
 [merge]
         tool = p4merge
 [mergetool]
