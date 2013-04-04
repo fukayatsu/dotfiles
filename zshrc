@@ -9,6 +9,10 @@ export PATH=/usr/local/bin:$PATH
 # node.js
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
 ## vim
 # bindkey -v
 
@@ -236,8 +240,6 @@ alias bi-path="bi --path=vendor/bundler"
 alias xphp="/Applications/XAMPP/xamppfiles/bin/php"
 alias xmysql="/Applications/XAMPP/xamppfiles/bin/mysql"
 alias xmysqladmin="/Applications/XAMPP/xamppfiles/bin/mysqladmin"
-alias dev-cakes="/Applications/XAMPP/htdocs/dev-cakes"
-alias pocake="~/github/pocake"
 
 ## 最後のスラッシュを自動的に削除しない
 setopt noautoremoveslash
@@ -284,3 +286,9 @@ export LOLCOMMITS_FONT="/Library/Fonts/ヒラギノ角ゴ Std W8.otf"
 
 # ローカル固有の設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+_Z_CMD=j
+. /usr/local/etc/profile.d/z.sh
+function precmd () {
+_z --add "$(pwd -P)"
+}
