@@ -14,4 +14,5 @@ for file in ${HOME_FILES[@]}; do
   ln -fs $PWD/$file $HOME/.$file
 done
 
-#ln -fs $PWD/sublime/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+ln -fs "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/usr/local/bin/
+ln -fs $PWD/sublime/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
