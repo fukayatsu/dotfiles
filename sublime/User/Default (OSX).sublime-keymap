@@ -1,4 +1,5 @@
 [
+  { "keys": ["ctrl+shift+r"], "command": "reindent" , "args": {"single_line": false}},
   { "keys": ["super+ctrl+t"], "command": "tweet_line"},
   { "keys": ["super+ctrl+m"], "command": "list_rails_models" },
   { "keys": ["super+ctrl+c"], "command": "list_rails_controllers" },

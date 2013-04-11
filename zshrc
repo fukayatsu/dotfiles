@@ -13,6 +13,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
+# postgres
+export PGDATA=/usr/local/var/postgres
+
 ## vim
 # bindkey -v
 
