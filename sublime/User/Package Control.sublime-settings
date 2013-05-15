@@ -23,6 +23,7 @@
 		"Jade",
 		"jQuery",
 		"JsFormat",
+		"LESS",
 		"LiveReload",
 		"Local History",
 		"Markdown Preview",
@@ -59,6 +60,7 @@
 		"Terminal",
 		"TweetLine",
 		"Twitter Bootstrap Snippets",
+		"Vagrant",
 		"VintageEx"
 	]
 }

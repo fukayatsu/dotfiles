@@ -16,8 +16,8 @@
         keepTemporaries = false
         trustExitCode = false
 [alias]
-  aa = add .
-  au = add -u
+  aa = add . -v
+  au = add -uv
   co = checkout
   cob = checkout -b
   cot = checkout -t
