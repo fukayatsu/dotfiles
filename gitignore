@@ -2,3 +2,7 @@ doc/tags
 doc/tags-ja
 .DS_Store
 hoge
+.tags
+.tags_sorted_by_file
+*.sublime-project
+*.sublime-workspace

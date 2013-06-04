@@ -295,3 +295,4 @@ _Z_CMD=j
 function precmd () {
 _z --add "$(pwd -P)"
 }
+compctl -U -K _z_zsh_tab_completion "$_Z_CMD"

@@ -7,6 +7,7 @@
 	editor = subl -w
 	pager = less -x4 -r
 	excludesfile = ~/.gitignore
+	autocrlf = input
 [merge]
         tool = p4merge
 [mergetool]
@@ -17,11 +18,12 @@
         trustExitCode = false
 [alias]
   aa = add . -v
-  au = add -uv
+  au = add . -uv
   co = checkout
   cob = checkout -b
   cot = checkout -t
   com = checkout master
+  cogl = checkout HEAD -- Gemfile.lock
   b = branch
   ba = branch -a
   bd = branch -d
