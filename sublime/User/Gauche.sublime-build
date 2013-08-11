@@ -1,0 +1,10 @@
+{
+  "cmd": ["gosh", "$file"],
+  "selector": "source.lisp",
+  "osx": {
+    "path": "/usr/local/bin:/opt/local/bin"
+  },
+  "linux": {
+    "path": "/usr/local/bin:/usr/bin"
+  }
+}

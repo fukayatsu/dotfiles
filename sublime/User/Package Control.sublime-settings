@@ -13,8 +13,10 @@
 		"Compass",
 		"CTags",
 		"Cucumber",
+		"ERB Snippets",
 		"FileDiffs",
 		"Format SQL",
+		"Gauche",
 		"Gist",
 		"Git",
 		"GitGutter",
@@ -25,6 +27,7 @@
 		"jQuery",
 		"JsFormat",
 		"LESS",
+		"lispindent",
 		"LiveReload",
 		"Local History",
 		"Markdown Preview",
@@ -59,11 +62,12 @@
 		"Stylus",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeREPL",
 		"SublimeServer",
+		"SwapSelection",
 		"Terminal",
 		"TweetLine",
 		"Twitter Bootstrap Snippets",
-		"Vagrant",
 		"VintageEx"
 	]
 }
