@@ -1,2 +1,6 @@
 export HOME=/Users/fukayatsu
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
+POW_EXT_DOMAINS=dev.127.0.0.1.xip.io
+
+export POW_TIMEOUT=3000
+export POW_WORKERS=3

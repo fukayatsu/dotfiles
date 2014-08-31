@@ -2,9 +2,9 @@ My dotfiles
 ===========
 
 # env
-MacBookPro(retina) Mountain Lion
+MacBookPro(retina) OSX 10.9.4
 
-default editor: sublime text 2
+default editor: sublime text 3
 
 # setup
 

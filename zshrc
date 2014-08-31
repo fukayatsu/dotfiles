@@ -3,11 +3,23 @@ HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
 
+export EDITOR="subl -w"
+
+# local
+export PATH=~/bin:$PATH
+
 # homebrew
 export PATH=/usr/local/bin:$PATH
 
+# go
+export GOPATH=~/.go/1.2
+export PATH=$GOPATH/bin:$PATH
+
 # node.js
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# ruby
+#export RUBYGEMS_GEMDEPS=-
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -219,6 +231,8 @@ alias df="df -h"
 alias lastcmd="fc -ln -1 | tr -d '\n' | pbcopy"
 
 alias xubl='xargs subl'
+alias e='subl'
+alias p='subl .'
 
 alias rake='noglob rake'
 alias octonew="~/github/octopress/octonew"
@@ -231,18 +245,40 @@ alias gitdb-local="git-comp && git branch --merged | grep -v 'master' | xargs gi
 alias gitdb-track="git-comp && git branch -r --merged | grep -v 'master' | xargs git branch -r -d"
 alias gitdb-remote="git-comp && git branch -a --merged | grep -v 'master' | grep remotes/origin | sed -e 's% *remotes/origin/%%' | xargs -I% git push origin :%
 "
+alias git-reset-all="git add . && git reset --hard & git add . & git reset --hard"
 
-alias githook-test-push="git commit --amend --no-edit; git push --force"
+alias git-lsu='git ls-files -u | awk "{print \$NF}" | uniq'
+
+alias hubb='hub browse'
+
+alias git-empty-push="git commit --amend --no-edit; git push --force"
 
 #alias irb=pry
 
 alias be="bundle exec"
+alias ber="bundle exec ruby"
 alias bi="bundle install"
 alias bi-path="bi --path=vendor/bundler"
 
 alias xphp="/Applications/XAMPP/xamppfiles/bin/php"
 alias xmysql="/Applications/XAMPP/xamppfiles/bin/mysql"
 alias xmysqladmin="/Applications/XAMPP/xamppfiles/bin/mysqladmin"
+
+alias o='open'
+alias oo='open .'
+
+alias clear-font-cache="atsutil databases -removeUser"
+
+#alias ag='ag -S'
+alias agh='ag --hidden'
+alias dones='/bin/bash -lc "cd ~/github/done-list && bundle exec ruby done_list.rb"'
+
+pr() {
+  echo 'restarting pow...'
+  powder restart;
+}
+
+suddenly-tweet() { t update "`suddenly $1`" }
 
 ## 最後のスラッシュを自動的に削除しない
 setopt noautoremoveslash
@@ -285,7 +321,12 @@ function wikipedia
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### lolcommits
-export LOLCOMMITS_FONT="/Library/Fonts/ヒラギノ角ゴ Std W8.otf"
+# export LOLCOMMITS_FONT="/Library/Fonts/ヒラギノ角ゴ Std W8.otf"
+export LOLCOMMITS_FONT=/Users/fukayatsu//Library/Fonts/SCPM-Regular.ttf
+
+### lang
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # ローカル固有の設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
@@ -296,3 +337,11 @@ function precmd () {
 _z --add "$(pwd -P)"
 }
 compctl -U -K _z_zsh_tab_completion "$_Z_CMD"
+
+# Auto bundler exec
+[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+
+# added by travis gem
+[ -f /Users/fukayatsu/.travis/travis.sh ] && source /Users/fukayatsu/.travis/travis.sh
+
+[[ -s /Users/fukayatsu/.tmuxinator/scripts/tmuxinator ]] && source /Users/fukayatsu/.tmuxinator/scripts/tmuxinator

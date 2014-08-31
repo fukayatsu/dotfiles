@@ -7,6 +7,8 @@
 	editor = subl -w
 	pager = less -x4 -r
 	excludesfile = ~/.gitignore
+	quotepath = false
+	precomposeunicode = true
 	autocrlf = input
 [merge]
         tool = p4merge
@@ -40,11 +42,16 @@
   d = diff
   cl = clone
   st = status -sb
+  l = log --date=iso
   vlog = log --pretty=format:'%C(red)%h%Creset %C(cyan)an>\
        %Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'\
        --abbrev-commit --date=relative
+  fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
 
 [push]
 	default = simple
 [heroku]
 	account = fukayatsu
+[pull]
+	rebase = true

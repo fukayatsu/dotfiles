@@ -15,8 +15,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"phpunit",
-		"Ruby Slim"
 	],
 	"scroll_past_end": true,
 	"tab_size": 2,

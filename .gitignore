@@ -4,3 +4,4 @@
 *.swo
 *.last-run
 SublimeTweet*.settings
+sublime/*
