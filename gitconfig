@@ -55,3 +55,6 @@
 	account = fukayatsu
 [pull]
 	rebase = true
+[ghq]
+  root = /Users/fukayatsu/src
+  

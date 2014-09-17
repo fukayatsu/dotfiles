@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"draw_white_space": "all",
 	"file_exclude_patterns":
 	[
@@ -10,22 +10,18 @@
 		"*.sublime-workspace",
 		".DS_Store"
 	],
-	"font_face": "SourceCodePro-Regular",
-	"font_size": 17.0,
+	"font_face": "SCPM",
+	"font_size": 16.0,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 	],
 	"scroll_past_end": true,
 	"tab_size": 2,
-	"trailing_spaces_ignore_list":
-	[
-		"*.md",
-		"*.markdown"
-	],
 	"trailing_spaces_on_save": true,
+	"trailing_spaces_trim_on_save": true,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": false,
+	"trim_trailing_white_space_on_save": true,
 	"vintage_ctrl_keys": true,
 	"vintage_start_in_command_mode": true
 }

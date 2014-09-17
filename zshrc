@@ -3,7 +3,7 @@ HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
 
-export EDITOR="subl -w"
+export EDITOR="vim"
 
 # local
 export PATH=~/bin:$PATH
@@ -28,8 +28,11 @@ eval "$(rbenv init -)"
 # postgres
 export PGDATA=/usr/local/var/postgres
 
-## vim
-# bindkey -v
+# emacs like key-bind
+bindkey -e
+
+#
+export PATH=/Users/fukayatsu/src/github.com/yoshiakisudo/mkrssh:$PATH
 
 ## 補完機能の強化
 autoload -U compinit
@@ -243,8 +246,8 @@ alias gitk=gitx
 alias git-comp="git checkout master && git pull"
 alias gitdb-local="git-comp && git branch --merged | grep -v 'master' | xargs git branch -d"
 alias gitdb-track="git-comp && git branch -r --merged | grep -v 'master' | xargs git branch -r -d"
-alias gitdb-remote="git-comp && git branch -a --merged | grep -v 'master' | grep remotes/origin | sed -e 's% *remotes/origin/%%' | xargs -I% git push origin :%
-"
+# alias gitdb-remote="git-comp && git branch -a --merged | grep -v 'master' | grep remotes/origin | sed -e 's% *remotes/origin/%%' | xargs -I% git push origin :%"
+
 alias git-reset-all="git add . && git reset --hard & git add . & git reset --hard"
 
 alias git-lsu='git ls-files -u | awk "{print \$NF}" | uniq'
@@ -271,7 +274,7 @@ alias clear-font-cache="atsutil databases -removeUser"
 
 #alias ag='ag -S'
 alias agh='ag --hidden'
-alias dones='/bin/bash -lc "cd ~/github/done-list && bundle exec ruby done_list.rb"'
+alias dones='/bin/bash -lc "cd ~/src/github.com/fukayatsu/done-list && bundle exec ruby done_list.rb"'
 
 pr() {
   echo 'restarting pow...'
@@ -331,8 +334,9 @@ export LANG=en_US.UTF-8
 # ローカル固有の設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+
 _Z_CMD=j
-. /usr/local/etc/profile.d/z.sh
+. ~/src/github.com/rupa/z/z.sh
 function precmd () {
 _z --add "$(pwd -P)"
 }

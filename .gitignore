@@ -5,3 +5,4 @@
 *.last-run
 SublimeTweet*.settings
 sublime/*
+"sublime/User/Package Control.system-ca-bundle"
