@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -a src/.[^.]* $HOME/
+cp -a src/common/.[^.]* $HOME/
