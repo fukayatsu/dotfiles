@@ -13,6 +13,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
+    ca-certificates \
     git
 
 USER $USERNAME
