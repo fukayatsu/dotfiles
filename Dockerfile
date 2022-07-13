@@ -1,5 +1,9 @@
 FROM ubuntu:20.04
 
+ENV TZ Asia/Tokyo
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
@@ -14,7 +18,9 @@ RUN groupadd --gid $USER_GID $USERNAME \
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     ca-certificates \
-    git
+    fish \
+    git \
+    less
 
 USER $USERNAME
 WORKDIR /workspaces/dotfiles

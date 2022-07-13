@@ -1,0 +1,65 @@
+[user]
+	name = fukayatsu
+	email = fukayatsu@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = code -w -n
+  pager = less -R -F -X -x4
+	excludesfile = ~/.gitignore
+	quotepath = false
+	precomposeunicode = true
+	autocrlf = input
+[alias]
+  aa = add . -v
+  au = add . -uv
+  co = checkout
+  cob = checkout -b
+  cot = checkout -t
+  com = checkout master
+  cogl = checkout HEAD -- Gemfile.lock
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  ft = fetch
+  ci = commit -v
+  cia = commit -av
+  cih = commit --amend -C HEAD
+  cim = commit -m
+  ps = push
+  ciam = commit -am
+  rb = rebase
+  rbm = rebase master
+  rbh = rebase HEAD
+  d = diff
+  cl = clone
+  st = status -sb
+  l = log --pretty='medium-reverse' --graph --name-status
+  vlog = log --pretty=format:'%C(red)%h%Creset %C(cyan)an>\
+       %Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'\
+       --abbrev-commit --date=relative
+  fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+  get = !ghq get -p
+  cd = "!ghq look `ghq list | fzy $(echo $1 | awk '{if($1!=\"\") print \"-q\" $1}')` ; :"
+  list = !ghq list
+  root = "!exec $SHELL ; :"
+  hspec = "!bin/rspec --fail-fast $(git diff --name-only HEAD^ spec/**/*_spec.rb)"
+  mspec = "!bin/rspec --fail-fast $(git diff --name-only origin/master spec/**/*_spec.rb)"
+  stg = "!git push origin $(git rev-parse --abbrev-ref HEAD):staging/deploy"
+
+[push]
+	default = simple
+[pull]
+	rebase = true
+[pretty]
+	medium-reverse = format:%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%n%w(80,2,2)%b
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[log]
+	date = iso-local
+[show]
+	date = iso-local
