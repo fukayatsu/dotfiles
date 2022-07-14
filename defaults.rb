@@ -36,7 +36,7 @@ loop do
   end
 
   # diff = HashDiff.diff(before, after)
-  diff = HashDiff.right_diff(before, after)
+  diff = HashDiff.left_diff(before, after)
   diff.keys.each do |domain|
     Array(ignore_domain_keys[domain]).each do |key|
       diff[domain].delete(key)
