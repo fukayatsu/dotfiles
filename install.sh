@@ -7,7 +7,11 @@ if [ $(uname -s) = "Linux" ]; then
 elif [ $(uname -s) = "Darwin" ]; then
   echo 'setup for macOS'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval $(/opt/homebrew/bin/brew shellenv)
   brew bundle --file src/macos/.Brewfile
 
   # TODO: set defaults
+
+  sudo sh -c "which fish >> /etc/shells"
+  chsh -s $(which fish)
 fi
