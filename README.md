@@ -11,7 +11,7 @@ xcode-select --install
 ```
 
 ```
-cd macos
+cd ~/dotfiles/macos
 ./00_install_homebrew.sh
 ./10_brew_and_cask_install.sh
 ...
