@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 read -p "App Storeにログイン済み? (y/N): " yn
 case "$yn" in
   [yY]*) echo 'ok';;

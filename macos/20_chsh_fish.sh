@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 if [ "$(which fish)" = "$(echo $SHELL)" ]; then
   echo "Shell is $SHELL"
 else
