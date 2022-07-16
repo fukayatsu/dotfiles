@@ -2,6 +2,7 @@
 
 set -eu
 
+eval $(/opt/homebrew/bin/brew shellenv)
 if [ "$(which fish)" = "$(echo $SHELL)" ]; then
   echo "Shell is $SHELL"
 else

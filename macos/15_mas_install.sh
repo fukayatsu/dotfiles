@@ -8,5 +8,6 @@ case "$yn" in
   *) echo "終了"; exit 1;;
 esac
 
+eval $(/opt/homebrew/bin/brew shellenv)
 CURRENT=$(cd $(dirname $0);pwd)
 brew bundle --file $CURRENT/brewfiles/mas.Brewfile
