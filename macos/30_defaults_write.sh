@@ -2,18 +2,17 @@
 
 set -eu
 
-# メニューバーにBluetooth, サウンドを表示
-defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter Bluetooth -int 18
-defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter Sound -int 18
+# NOTE: System Preferencesで楽に設定可能なものは基本的にそちらで設定する
 
-# スクリーンショットのファイル名を変更
+# スクリーンショットの設定
 defaults write com.apple.screencapture name "ss"
+defaults write com.apple.screencapture disable-shadow -boolean true
 
-# トラックパッド
-defaults write -g com.apple.trackpad.scaling 2.5
-defaults write -g com.apple.mouse.tapBehavior -int 1
-
-# キーリピートを有効化・高速化
+# キーリピートを有効化
 defaults write -g ApplePressAndHoldEnabled -bool false
-defaults write -g KeyRepeat -int 3
-defaults write -g InitialKeyRepeat -int 10
+
+# Finderの設定
+defaults write -g AppleShowAllExtensions -bool true
+defaults write com.apple.finder AppleShowAllFiles true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowPathbar -bool true
