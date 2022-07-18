@@ -1,3 +1,7 @@
+if type -q direnv
+  direnv hook fish | source
+end
+
 if status is-interactive
   # Commands to run in interactive sessions can go here
 
@@ -11,9 +15,5 @@ if status is-interactive
 
   if type -q rbenv
     rbenv init - fish | source
-  end
-
-  if type -q direnv
-    direnv hook fish | source
   end
 end
