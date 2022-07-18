@@ -3,7 +3,8 @@ mas 'BetterSnapTool',  id: 417375580
 mas 'Skitch',          id: 425955336
 mas 'The Unarchiver',  id: 425424353
 mas 'GIPHY CAPTURE',   id: 668208984
-mas 'Medis',           id: 1063631769
+# mas 'Medis',           id: 1063631769 #v1
+mas 'Medis',           id: 1579200037 #v2
 mas 'Postico',         id: 1031280567
 mas 'Tailscale',       id: 1475387142
 mas 'CotEditor',       id: 1024640650

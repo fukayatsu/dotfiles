@@ -16,3 +16,8 @@ cd ~/dotfiles/macos
 ./10_brew_and_cask_install.sh
 ...
 ```
+
+### Other apps
+
+- Microsoft 365
+- Parallels Desktop
