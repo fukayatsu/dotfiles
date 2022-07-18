@@ -1,6 +1,15 @@
 if status is-interactive
   # Commands to run in interactive sessions can go here
-  eval (/opt/homebrew/bin/brew shellenv)
-  source (anyenv init -|psub)
-  rbenv init - fish | source
+
+  if type -q /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv)
+  end
+
+  if type -q anyenv
+    source (anyenv init -|psub)
+  end
+
+  if type -q rbenv
+    rbenv init - fish | source
+  end
 end
