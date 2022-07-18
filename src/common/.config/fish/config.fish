@@ -12,4 +12,8 @@ if status is-interactive
   if type -q rbenv
     rbenv init - fish | source
   end
+
+  if type -q direnv
+    direnv hook fish | source
+  end
 end
