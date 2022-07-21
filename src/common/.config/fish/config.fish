@@ -4,6 +4,28 @@ end
 
 if status is-interactive
   # Commands to run in interactive sessions can go here
+  alias be='bundle exec'
+  alias da='direnv allow'
+
+  # mkdir -p しつつ cd
+  function mkcd
+    if ! test (count $argv) -eq 1
+      echo 'Pass only 1 arg'
+      return 1
+    end
+
+    mkdir -p $argv[1]
+    eval 'cd' $argv[1]
+  end
+
+  # mkdir -p しつつ touch
+  function dtouch
+    for arg in $argv
+      echo (dirname $arg)
+      mkdir -p (dirname $arg)
+      touch $arg
+    end
+  end
 
   if type -q /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
