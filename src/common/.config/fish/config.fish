@@ -9,6 +9,12 @@ if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
   end
 
+  # https://asdf-vm.com/guide/getting-started.html
+  if type -q ~/.asdf/bin/asdf
+    source ~/.asdf/asdf.fish
+    mkdir -p ~/.config/fish/completions; and ln -sf ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+  end
+
   if type -q anyenv
     source (anyenv init -|psub)
   end
