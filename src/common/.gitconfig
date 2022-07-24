@@ -63,3 +63,5 @@
 	date = iso-local
 [show]
 	date = iso-local
+[ghq]
+	root = ~/src
