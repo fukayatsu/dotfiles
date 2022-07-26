@@ -1,3 +1,7 @@
+fish_add_path $HOME/bin
+fish_add_path $HOME/.anyenv/bin
+fish_add_path $HOME/.ep/bin
+
 if type -q direnv
   direnv hook fish | source
 end
