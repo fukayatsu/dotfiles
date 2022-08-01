@@ -71,8 +71,8 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '$'
     end
 
-    # [User]@[HOST]
-    echo -n ┌ (prompt_login)' '
+    # ╭─ [User]@[HOST]
+    echo -n '╭─' (prompt_login)' '
 
     # PWD
     set_color $color_cwd
@@ -86,5 +86,5 @@ function fish_prompt --description 'Write out the prompt'
     echo $pipestatus_string
     set_color normal
 
-    echo -n "└ $suffix "
+    echo -n "$suffix "
 end
