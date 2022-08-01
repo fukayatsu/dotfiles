@@ -24,7 +24,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     ca-certificates \
     fish \
     git \
-    less
+    less \
+    ssh
 
 USER $USERNAME
 WORKDIR /workspaces/dotfiles
