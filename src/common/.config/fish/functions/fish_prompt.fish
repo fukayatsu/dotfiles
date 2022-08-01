@@ -71,7 +71,7 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '$'
     end
 
-    @[HOST]
+    # [User]@[HOST]
     echo -n ┌ (prompt_login)' '
 
     # PWD
