@@ -72,7 +72,11 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     # ╭─ [User]@[HOST]
-    echo -n '╭─' (prompt_login)' '
+    set_color magenta
+    # echo -n '╭─'
+    echo -n '┏━'
+    set_color normal
+    echo -n (prompt_login)' '
 
     # PWD
     set_color $color_cwd
