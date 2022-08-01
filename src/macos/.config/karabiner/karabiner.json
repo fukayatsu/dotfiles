@@ -191,6 +191,34 @@
                     "type": "basic"
                   }
                 ]
+              },
+              {
+                "description": "for Slack",
+                "manipulators": [
+                  {
+                    "conditions": [
+                      {
+                        "bundle_identifiers": [
+                          "^com\\.tinyspeck\\.slackmacgap"
+                        ],
+                        "type": "frontmost_application_if"
+                      }
+                    ],
+                    "from": {
+                      "key_code": "a",
+                      "modifiers": {
+                        "mandatory": ["option"]
+                      }
+                    },
+                    "to": [
+                      {
+                        "key_code": "down_arrow",
+                        "modifiers": ["left_option", "left_shift"]
+                      }
+                    ],
+                    "type": "basic"
+                  }
+                ]
               }
             ]
           },
