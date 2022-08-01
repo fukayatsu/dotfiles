@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-brew 'anyenv'
 brew 'fish'
 brew 'git'
 brew 'jo'

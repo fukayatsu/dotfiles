@@ -1,6 +1,5 @@
 fish_add_path $HOME/bin
 fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.anyenv/bin
 fish_add_path $HOME/.ep/bin
 
 if type -q direnv
@@ -40,14 +39,6 @@ if status is-interactive
   if type -q ~/.asdf/bin/asdf
     source ~/.asdf/asdf.fish
     mkdir -p ~/.config/fish/completions; and ln -sf ~/.asdf/completions/asdf.fish ~/.config/fish/completions
-  end
-
-  if type -q anyenv
-    source (anyenv init -|psub)
-  end
-
-  if type -q rbenv
-    rbenv init - fish | source
   end
 
   if type -q thefuck
