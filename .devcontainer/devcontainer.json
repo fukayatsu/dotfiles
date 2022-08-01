@@ -22,5 +22,12 @@
 	"runArgs": [
 		"-h",
 		"devcon"
-	]
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens"
+			]
+		}
+	}
 }
