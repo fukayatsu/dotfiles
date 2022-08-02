@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV TZ Asia/Tokyo
 ENV LANG ja_JP.UTF-8
@@ -23,6 +23,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     ca-certificates \
     fish \
+    fzf \
     git \
     less \
     ssh
