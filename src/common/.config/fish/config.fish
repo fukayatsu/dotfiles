@@ -1,12 +1,8 @@
-fish_add_path $HOME/bin
-fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.ep/bin
-
-if type -q direnv
-  direnv hook fish | source
-end
-
 if status is-interactive
+  fish_add_path $HOME/bin
+  fish_add_path $HOME/.local/bin
+  fish_add_path $HOME/.ep/bin
+
   # Commands to run in interactive sessions can go here
   alias be='bundle exec'
   alias da='direnv allow'
@@ -41,7 +37,21 @@ if status is-interactive
     mkdir -p ~/.config/fish/completions; and ln -sf ~/.asdf/completions/asdf.fish ~/.config/fish/completions
   end
 
+  if type -q direnv
+    direnv hook fish | source
+  end
+
   if type -q thefuck
-    thefuck --alias | source
+    # for speed up
+    # thefuck --alias | source
+    function fuck -d "Correct your previous console command"
+      set -l fucked_up_command $history[1]
+      env TF_SHELL=fish TF_ALIAS=fuck PYTHONIOENCODING=utf-8 thefuck $fucked_up_command THEFUCK_ARGUMENT_PLACEHOLDER $argv | read -l unfucked_command
+      if [ "$unfucked_command" != "" ]
+        eval $unfucked_command
+        builtin history delete --exact --case-sensitive -- $fucked_up_command
+        builtin history merge
+      end
+    end
   end
 end
