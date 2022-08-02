@@ -4,7 +4,7 @@
 [color]
 	ui = auto
 [core]
-	editor = code -w -n
+	editor = code -w -n -r
   pager = less -R -F -X -x4
 	excludesfile = ~/.gitignore
 	quotepath = false
