@@ -54,4 +54,13 @@ if status is-interactive
       end
     end
   end
+
+
+  if type -q fzf
+    function fzf_git_switch
+      git switch (string replace remotes/origin/ '' (git branch -a | fzf | tr -d ' *' ))
+    end
+    # Use `fish_key_reader`
+    bind \u222B 'fzf_git_switch' # alt + b
+  end
 end
