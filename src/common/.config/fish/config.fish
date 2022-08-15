@@ -6,6 +6,7 @@ if status is-interactive
   # Commands to run in interactive sessions can go here
   alias be='bundle exec'
   alias da='direnv allow'
+  alias hubb='gh browse -b (git branch --show-current)'
 
   # mkdir -p しつつ cd
   function mkcd
