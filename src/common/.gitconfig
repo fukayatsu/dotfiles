@@ -46,6 +46,7 @@
   root = "!exec $SHELL ; :"
   hspec = "!bin/rspec --fail-fast $(git diff --name-only HEAD^ spec/**/*_spec.rb)"
   mspec = "!bin/rspec --fail-fast $(git diff --name-only origin/master spec/**/*_spec.rb)"
+  mcop = "!bundle exec rubocop $(git diff origin/master --name-only)"
   stg = "!git push origin $(git rev-parse --abbrev-ref HEAD):staging/deploy"
 
 [push]
