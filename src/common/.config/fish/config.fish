@@ -2,6 +2,7 @@ if status is-interactive
   fish_add_path $HOME/bin
   fish_add_path $HOME/.local/bin
   fish_add_path $HOME/.ep/bin
+  fish_add_path $HOME/.cargo/bin
 
   # Commands to run in interactive sessions can go here
   alias be='bundle exec'
